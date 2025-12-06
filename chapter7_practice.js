@@ -1,11 +1,9 @@
-// chapter7_practice.js
-// Solutions for Chapter 7 practice exercises
-// Each section is labeled. Run this file with Node.js: `node chapter7_practice.js`
 
-console.log("=== Chapter 7 Practice Solutions ===\n");
 
-/* 1️⃣ Creating Objects Using Object Literal */
-console.log("1. Object literals:");
+
+
+ 1️⃣ Creating Objects Using Object Literal 
+
 const student = { name: "Amina", age: 20, course: "Data Science" };
 console.log("Student:", student);
 
@@ -16,8 +14,8 @@ const phone = { company: "Samsung", storage: "128GB", battery: "85%" };
 console.log("Phone:", phone);
 console.log(""); // blank line
 
-/* 2️⃣ Creating Objects Using Constructor Function */
-console.log("2. Constructor functions:");
+ Creating Objects Using Constructor Function 
+
 function Employee(name, salary, role) {
   this.name = name;
   this.salary = salary;
@@ -43,8 +41,8 @@ const book1 = new Book("JavaScript Basics", "John Doe", 250);
 console.log("Book:", book1);
 console.log("");
 
-// 3️⃣ Creating Objects Using ES6 Class
-console.log("3. ES6 Classes:");
+ Creating Objects Using ES6 Class
+
 class Teacher {
   constructor(name = "Fatima", subject = "Math", experience = 5) {
     this.name = name;
@@ -76,8 +74,8 @@ const animal1 = new Animal();
 console.log("Animal:", animal1);
 console.log("");
 
-// 4️⃣ Accessing & Updating Elements
-console.log("4. Accessing & updating:");
+ Accessing & Updating Elements
+
 const laptop = { brand: "Dell", ram: "8GB", price: 700 };
 console.log("Laptop brand (before):", laptop.brand);
 laptop.ram = "16GB";
@@ -94,8 +92,7 @@ hotelRoom.price = 40;
 console.log("Updated room:", hotelRoom);
 console.log("");
 
-// 5️⃣ Adding New Elements (Dot & Bracket)
-console.log("5. Adding new elements:");
+
 const car2 = { brand: "Honda", model: "Civic", year: 2019 };
 car2.owner = "Omar"; // dot notation
 car2["last-service-date"] = "2025-01-01"; // bracket notation
@@ -112,8 +109,7 @@ shopItem["discount-percentage"] = 10;
 console.log("Shop item:", shopItem);
 console.log("");
 
-// 6️⃣ Iterating Through Objects
-console.log("6. Iteration:");
+
 const menu = { burger: 5, pizza: 8, juice: 3 };
 console.log("Menu items and prices:");
 for (const item in menu) {
@@ -133,8 +129,7 @@ for (const [subject, time] of Object.entries(schedule)) {
 }
 console.log("");
 
-// 7️⃣ Converting Objects to JSON & back
-console.log("7. JSON conversions:");
+
 const movie = { title: "Inception", duration: "2h 30m", rating: 9 };
 const movieJson = JSON.stringify(movie);
 console.log("Movie JSON string:", movieJson);
@@ -145,10 +140,3 @@ console.log("Parsed object from JSON string:");
 for (const key in objFromJson) {
   console.log(`${key}: ${objFromJson[key]}`);
 }
-
-const weather = { temperature: 32, humidity: "70%", condition: "Sunny" };
-const weatherJson = JSON.stringify(weather);
-const weatherBack = JSON.parse(weatherJson);
-console.log("Weather (object after convert to JSON and back):", weatherBack);
-
-console.log("\n=== End of solutions ===");
